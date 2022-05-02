@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     @IBOutlet private weak var label: UILabel!
 
     private let textModel = TextModel()
@@ -19,8 +18,7 @@ class ViewController: UIViewController {
         textModel.delegate = self
     }
 
-
-    @IBAction func pressedButton(_ sender: Any) {
+    @IBAction private func pressedButton(_ sender: Any) {
         textModel.changeText()
     }
 
@@ -31,7 +29,6 @@ class ViewController: UIViewController {
     private func updateLabel() {
         label.text = textModel.text
     }
-
 }
 
 extension ViewController: TextModelDelegate {
